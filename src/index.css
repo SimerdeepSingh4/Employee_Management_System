@@ -1,0 +1,30 @@
+@import "tailwindcss";
+* {
+  color: #fff;
+}
+
+body{
+  background-color: #111;
+}
+#tasklist::-webkit-scrollbar,
+#alltask::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+#tasklist::-webkit-scrollbar-track,
+#alltask::-webkit-scrollbar-track {
+  background: #1c1c1c; /* Track background */
+  border-radius: 9999px;
+}
+
+#tasklist::-webkit-scrollbar-thumb,
+#alltask::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* Tailwind blue-500 */
+  border-radius: 9999px;
+  border: 2px solid #1c1c1c; /* Creates space around thumb */
+}
+
+#tasklist::-webkit-scrollbar-thumb:hover,
+#alltask::-webkit-scrollbar-thumb:hover {
+  background: #2563eb; /* Tailwind blue-600 on hover */
+}
