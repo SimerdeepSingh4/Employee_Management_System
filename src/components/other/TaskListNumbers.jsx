@@ -1,26 +1,35 @@
-import React from 'react'
+import React from "react";
+import { CheckCircle, XCircle, ClipboardList, Clock } from "lucide-react";
 
 const TaskListNumbers = () => {
-  return (
-    <div className='flex mt-10 justify-between gap-5 screen'>
-        <div className='rounded-xl w-[45%] py-6 px-9 bg-red-400'>
-            <h2 className='text-3xl font-semibold'>0</h2>
-            <h3 className='text-xl font-medium'>New Task</h3>
-        </div>
-        <div className='rounded-xl w-[45%] py-6 px-9 bg-blue-400'>
-            <h2 className='text-3xl font-semibold'>0</h2>
-            <h3 className='text-xl font-medium'>New Task</h3>
-        </div>
-        <div className='rounded-xl w-[45%] py-6 px-9 bg-green-400'>
-            <h2 className='text-3xl font-semibold'>0</h2>
-            <h3 className='text-xl font-medium'>New Task</h3>
-        </div>
-        <div className='rounded-xl w-[45%] py-6 px-9 bg-yellow-400'>
-            <h2 className='text-3xl font-semibold'>0</h2>
-            <h3 className='text-xl font-medium'>New Task</h3>
-        </div>
-    </div>
-  )
-}
+  const stats = [
+    { label: "New Task", count: 1, color: "from-red-400 to-red-500", icon: ClipboardList },
+    { label: "Completed Task", count: 3, color: "from-blue-400 to-blue-500", icon: CheckCircle },
+    { label: "Accepted Task", count: 0, color: "from-green-400 to-green-500", icon: Clock },
+    { label: "Failed Task", count: 0, color: "from-yellow-400 to-yellow-500", icon: XCircle },
+  ];
 
-export default TaskListNumbers
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
+      {stats.map((stat, index) => {
+        const Icon = stat.icon;
+        return (
+          <div
+            key={index}
+            className={`rounded-xl py-6 px-6 bg-gradient-to-br ${stat.color} text-white shadow-md hover:shadow-xl transition-all duration-300`}
+          >
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-white/20 rounded-lg">
+                <Icon className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold">{stat.count}</h2>
+            </div>
+            <p className="text-lg font-medium mt-3">{stat.label}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default TaskListNumbers;
