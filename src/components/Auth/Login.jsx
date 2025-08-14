@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AuthForm = ({ handleLogin, handleSignup }) => {
+const Login = ({ handleLogin, handleSignup }) => {
   const [isLogin, setIsLogin] = useState(true);
 
   // Form states
@@ -120,4 +120,4 @@ const AuthForm = ({ handleLogin, handleSignup }) => {
   );
 };
 
-export default AuthForm;
+export default Login;

@@ -1,13 +1,12 @@
 import React from "react";
-
-const Header = ({ name = "Simerdeep", role = "Employee", onLogout }) => {
+const Header = ({ data, onLogout }) => {
   return (
     <div className="flex items-center justify-between py-4 border-b border-gray-700">
       {/* Greeting */}
       <div>
         <h1 className="text-sm sm:text-base text-gray-400">Hello,</h1>
         <h2 className="text-xl sm:text-3xl font-semibold text-white flex items-center gap-2">
-          {name} 
+          {data.name}
           <span className="animate-wave">👋</span>
         </h2>
         {/* <p className="text-xs sm:text-sm text-gray-500">{role}</p> */}

@@ -3,12 +3,13 @@ import Header from "../other/Header";
 import TaskListNumbers from "../other/TaskListNumbers";
 import TaskList from "../TaskList/TaskList";
 
-const EmployeeDashboard = () => {
+const EmployeeDashboard = ({data}) => {
+  console.log(data)
   return (
     <div className="min-h-screen bg-[#1c1c1c] text-white">
       <div className="p-4 sm:p-10 max-w-7xl mx-auto">
         {/* Header */}
-        <Header />
+        <Header data={data}/>
 
         {/* Stats Section */}
         <section className="mt-8">
