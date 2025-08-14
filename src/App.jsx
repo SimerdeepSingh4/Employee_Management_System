@@ -12,42 +12,52 @@ const App = () => {
   const [loggedInUserData, setloggedInUserData] = useState(null)
   const authData = useContext(AuthContext)
 
+  useEffect(() => {
+    setLocalStorage();
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (loggedInUser) {
+      const userData = JSON.parse(loggedInUser);
+      if (userData.tasks) { 
+        setUser('employee');
+      } else {
+        setUser('admin');
+      }
+      setloggedInUserData(userData);
+    }
+  }, []);
 
-  // useEffect(() => {
-  //   setLocalStorage();
-  //   if(authData) {
-  //     const loggedInUser = localStorage.getItem("loggedInUser")
-  //     if(loggedInUser){
-  //       setUser(loggedInUser.role)
-  //     }
-  //   }
-  // }, [authData]);
-  
 
   const handleLogin = (email, password) => {
     const admin = authData.admins.find((e) => email === e.email && password === e.password)
     if(admin){
       setUser('admin')
       setloggedInUserData(admin)
-      localStorage.setItem("loggedInUser", JSON.stringify("admins"))
+      localStorage.setItem("loggedInUser", JSON.stringify(admin))
     } else if(authData) {
       const emp = authData.employees.find((e) => email === e.email && password === e.password)
       if(emp){
         setUser('employee')
         setloggedInUserData(emp)
+        localStorage.setItem("loggedInUser", JSON.stringify(emp))
+      } else {
+        alert("Invalid Credentials")
       }
-      localStorage.setItem("loggedInUser", JSON.stringify("employee"))
     }
     else{
       alert("Invalid Credentials")
     }
   }
 
+    const handleLogout = () => {
+    localStorage.removeItem("loggedInUser");
+    setUser(null);
+    setloggedInUserData(null);
+    };
   
   return (
     <>
     {!user && <Login handleLogin={handleLogin} />}
-      {user == 'admin' ?  <AdminDashboard data={loggedInUserData}/> : user == 'employee' ? <EmployeeDashboard data={loggedInUserData} /> : null}
+      {user == 'admin' ?  <AdminDashboard data={loggedInUserData} onLogout={handleLogout}/> : user == 'employee' ? <EmployeeDashboard data={loggedInUserData} onLogout={handleLogout} /> : null}
 
     </>
   )

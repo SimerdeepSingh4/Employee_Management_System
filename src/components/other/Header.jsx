@@ -1,5 +1,6 @@
 import React from "react";
 const Header = ({ data, onLogout }) => {
+  
   return (
     <div className="flex items-center justify-between py-4 border-b border-gray-700">
       {/* Greeting */}

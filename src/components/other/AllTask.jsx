@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AllTask = () => {
+const AllTask = ({data}) => {
   return (
     <div id='alltask' className='bg-[#1c1c1c] p-5 mt-5 h-48 overflow-auto rounded'>
         <div className='bg-red-400 mb-2 py-2 px-4 flex justify-between rounded'>

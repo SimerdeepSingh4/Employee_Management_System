@@ -13,7 +13,8 @@ const employees = [
                 "task_title": "Design Login Page",
                 "task_description": "Create a responsive login page using TailwindCSS.",
                 "task_date": "2025-08-12",
-                "category": "Design"
+                "category": "Design",
+                "priority": "High"
             },
             {
                 "active": false,
@@ -23,7 +24,8 @@ const employees = [
                 "task_title": "Fix Navbar Bug",
                 "task_description": "Resolve navbar collapse issue on mobile devices.",
                 "task_date": "2025-08-10",
-                "category": "Development"
+                "category": "Development",
+                "priority": "Low"
             },
             {
                 "active": true,
@@ -33,7 +35,8 @@ const employees = [
                 "task_title": "Update API Endpoints",
                 "task_description": "Update all outdated API endpoints to match the new backend version.",
                 "task_date": "2025-08-11",
-                "category": "Backend"
+                "category": "Backend",
+                "priority": "Medium"
             }
         ]
     },
@@ -51,7 +54,8 @@ const employees = [
                 "task_title": "Write Documentation",
                 "task_description": "Prepare documentation for the new payment gateway integration.",
                 "task_date": "2025-08-15",
-                "category": "Documentation"
+                "category": "Documentation",
+                "priority": "Low"
             },
             {
                 "active": false,
@@ -61,7 +65,8 @@ const employees = [
                 "task_title": "Optimize Images",
                 "task_description": "Compress images on the landing page for faster load time.",
                 "task_date": "2025-08-09",
-                "category": "Performance"
+                "category": "Performance",
+                "priority": "Medium"
             },
             {
                 "active": false,
@@ -71,7 +76,8 @@ const employees = [
                 "task_title": "Database Backup",
                 "task_description": "Failed to backup the database due to connection timeout.",
                 "task_date": "2025-08-07",
-                "category": "Database"
+                "category": "Database",
+                "priority": "High"
             },
             {
                 "active": true,
@@ -81,7 +87,8 @@ const employees = [
                 "task_title": "Test User Registration",
                 "task_description": "Perform QA testing on the new user registration flow.",
                 "task_date": "2025-08-14",
-                "category": "Testing"
+                "category": "Testing",
+                "priority": "Medium"
             }
         ]
     },
@@ -99,7 +106,8 @@ const employees = [
                 "task_title": "Create Dashboard UI",
                 "task_description": "Design a new dashboard interface with charts and analytics.",
                 "task_date": "2025-08-13",
-                "category": "Design"
+                "category": "Design",
+                "priority": "High"
             },
             {
                 "active": false,
@@ -109,7 +117,8 @@ const employees = [
                 "task_title": "Refactor CSS",
                 "task_description": "Clean up unused CSS classes and improve structure.",
                 "task_date": "2025-08-08",
-                "category": "Development"
+                "category": "Development",
+                "priority": "Medium"
             },
             {
                 "active": false,
@@ -119,7 +128,8 @@ const employees = [
                 "task_title": "Fix Payment Gateway Bug",
                 "task_description": "Payment fails when using coupon codes.",
                 "task_date": "2025-08-05",
-                "category": "Backend"
+                "category": "Backend",
+                "priority": "Low"
             },
             {
                 "active": true,
@@ -129,7 +139,8 @@ const employees = [
                 "task_title": "Improve SEO",
                 "task_description": "Add meta tags and improve heading structure.",
                 "task_date": "2025-08-16",
-                "category": "SEO"
+                "category": "SEO",
+                "priority": "Medium"
             },
             {
                 "active": false,
@@ -139,7 +150,8 @@ const employees = [
                 "task_title": "Customer Feedback Form",
                 "task_description": "Add a feedback form on the contact page.",
                 "task_date": "2025-08-17",
-                "category": "Frontend"
+                "category": "Frontend",
+                "priority": "Low"
             }
         ]
     },
@@ -157,7 +169,8 @@ const employees = [
                 "task_title": "Integrate Email Service",
                 "task_description": "Set up email notifications for order confirmation.",
                 "task_date": "2025-08-18",
-                "category": "Backend"
+                "category": "Backend",
+                "priority": "Medium"
             },
             {
                 "active": false,
@@ -167,7 +180,8 @@ const employees = [
                 "task_title": "Add Dark Mode",
                 "task_description": "Implement dark mode for the application.",
                 "task_date": "2025-08-09",
-                "category": "Frontend"
+                "category": "Frontend",
+                "priority": "Low"
             },
             {
                 "active": false,
@@ -177,7 +191,9 @@ const employees = [
                 "task_title": "Server Migration",
                 "task_description": "Failed to migrate due to insufficient permissions.",
                 "task_date": "2025-08-06",
-                "category": "DevOps"
+                "category": "DevOps",
+                "priority": "High"
+            
             }
         ]
     },
@@ -195,7 +211,8 @@ const employees = [
                 "task_title": "Create Blog Layout",
                 "task_description": "Design a responsive blog layout for articles.",
                 "task_date": "2025-08-19",
-                "category": "Design"
+                "category": "Design",
+                "priority": "Medium"
             },
             {
                 "active": false,
@@ -205,7 +222,8 @@ const employees = [
                 "task_title": "Add Search Feature",
                 "task_description": "Implement search functionality with autocomplete.",
                 "task_date": "2025-08-08",
-                "category": "Frontend"
+                "category": "Frontend",
+                "priority": "Low"
             },
             {
                 "active": false,
@@ -215,7 +233,9 @@ const employees = [
                 "task_title": "Security Patch",
                 "task_description": "Failed to apply security patch due to server error.",
                 "task_date": "2025-08-07",
-                "category": "Security"
+                "category": "Security",
+                "priority": "High"
+            
             },
             {
                 "active": true,
@@ -225,7 +245,8 @@ const employees = [
                 "task_title": "Social Media Integration",
                 "task_description": "Link social media accounts to the user profile page.",
                 "task_date": "2025-08-15",
-                "category": "Backend"
+                "category": "Backend",
+                "priority": "Medium"
             }
         ]
     }

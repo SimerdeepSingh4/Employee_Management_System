@@ -1,12 +1,34 @@
 import React from "react";
 import { CheckCircle, XCircle, ClipboardList, Clock } from "lucide-react";
 
-const TaskListNumbers = () => {
+const TaskListNumbers = ({ data }) => {
+  const tasks = data?.tasks || [];
+
   const stats = [
-    { label: "New Task", count: 1, color: "from-red-400 to-red-500", icon: ClipboardList },
-    { label: "Completed Task", count: 3, color: "from-blue-400 to-blue-500", icon: CheckCircle },
-    { label: "Accepted Task", count: 0, color: "from-green-400 to-green-500", icon: Clock },
-    { label: "Failed Task", count: 0, color: "from-yellow-400 to-yellow-500", icon: XCircle },
+    {
+      label: "New Task",
+      count: tasks.filter((t) => t.new_task).length,
+      color: "from-red-400 to-red-500",
+      icon: ClipboardList,
+    },
+    {
+      label: "Completed Task",
+      count: tasks.filter((t) => t.completed).length,
+      color: "from-blue-400 to-blue-500",
+      icon: CheckCircle,
+    },
+    {
+      label: "Accepted Task",
+      count: tasks.filter((t) => t.active && !t.completed && !t.failed).length,
+      color: "from-green-400 to-green-500",
+      icon: Clock,
+    },
+    {
+      label: "Failed Task",
+      count: tasks.filter((t) => t.failed).length,
+      color: "from-yellow-400 to-yellow-500",
+      icon: XCircle,
+    },
   ];
 
   return (
