@@ -1,8 +1,9 @@
 const employees = [
     {
         "id": 1,
-        "name": "John Doe",
-        "email": "employee1@example.com",
+        "role": "employee",
+        "name": "Arjun Mehra",
+        "email": "arjun.mehra@example.com",
         "password": "123",
         "tasks": [
             {
@@ -38,12 +39,19 @@ const employees = [
                 "category": "Backend",
                 "priority": "Medium"
             }
-        ]
+        ],
+        "task_count": {
+            "activeTasks": 2,
+            "completedTasks": 1,
+            "newTasks": 1,
+            "failedTasks": 1
+        }
     },
     {
         "id": 2,
-        "name": "Jane Smith",
-        "email": "employee2@example.com",
+        "role": "employee",
+        "name": "Neha Kapoor",
+        "email": "neha.kapoor@example.com",
         "password": "123",
         "tasks": [
             {
@@ -90,12 +98,19 @@ const employees = [
                 "category": "Testing",
                 "priority": "Medium"
             }
-        ]
+        ],
+        "task_count": {
+            "activeTasks": 2,
+            "completedTasks": 1,
+            "newTasks": 1,
+            "failedTasks": 1
+        }
     },
     {
         "id": 3,
-        "name": "Bob Johnson",
-        "email": "employee3@example.com",
+        "role": "employee",
+        "name": "Rohit Sharma",
+        "email": "rohit.sharma@example.com",
         "password": "123",
         "tasks": [
             {
@@ -153,12 +168,19 @@ const employees = [
                 "category": "Frontend",
                 "priority": "Low"
             }
-        ]
+        ],
+        "task_count": {
+            "activeTasks": 2,
+            "completedTasks": 1,
+            "newTasks": 2,
+            "failedTasks": 1
+        }
     },
     {
         "id": 4,
-        "name": "Alice Brown",
-        "email": "employee4@example.com",
+        "role": "employee",
+        "name": "Ananya Singh",
+        "email": "ananya.singh@example.com",
         "password": "123",
         "tasks": [
             {
@@ -193,14 +215,20 @@ const employees = [
                 "task_date": "2025-08-06",
                 "category": "DevOps",
                 "priority": "High"
-            
             }
-        ]
+        ],
+        "task_count": {
+            "activeTasks": 1,
+            "completedTasks": 1,
+            "newTasks": 1,
+            "failedTasks": 1
+        }
     },
     {
         "id": 5,
-        "name": "David Lee",
-        "email": "employee5@example.com",
+        "role": "employee",
+        "name": "Kabir Nair",
+        "email": "kabir.nair@example.com",
         "password": "123",
         "tasks": [
             {
@@ -235,7 +263,6 @@ const employees = [
                 "task_date": "2025-08-07",
                 "category": "Security",
                 "priority": "High"
-            
             },
             {
                 "active": true,
@@ -248,32 +275,40 @@ const employees = [
                 "category": "Backend",
                 "priority": "Medium"
             }
-        ]
+        ],
+        "task_count": {
+            "activeTasks": 2,
+            "completedTasks": 1,
+            "newTasks": 1,
+            "failedTasks": 1
+        }
     }
-]
+];
+
 
 const admins = [
     {
         "id": 1,
+        "role": "admin",
         "name": "Simerdeep",
         "email": "admin@example.com",
         "password": "123"
     }
 ]
 
-export const setLocalStorage = () =>{
-    if(!localStorage.getItem('employees')){
+export const setLocalStorage = () => {
+    if (!localStorage.getItem('employees')) {
         localStorage.setItem('employees', JSON.stringify(employees))
     }
-    if(!localStorage.getItem('admins')){
+    if (!localStorage.getItem('admins')) {
         localStorage.setItem('admins', JSON.stringify(admins))
     }
 }
 
-export const getLocalStorage = () =>{
+export const getLocalStorage = () => {
     const employees = JSON.parse(localStorage.getItem('employees'))
     const admins = JSON.parse(localStorage.getItem('admins'))
-    
-    return {employees, admins}
-    
+
+    return { employees, admins }
+
 }

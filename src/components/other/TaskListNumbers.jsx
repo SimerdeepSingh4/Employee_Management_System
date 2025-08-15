@@ -4,32 +4,32 @@ import { CheckCircle, XCircle, ClipboardList, Clock } from "lucide-react";
 const TaskListNumbers = ({ data }) => {
   const tasks = data?.tasks || [];
 
-  const stats = [
-    {
-      label: "New Task",
-      count: tasks.filter((t) => t.new_task).length,
-      color: "from-red-400 to-red-500",
-      icon: ClipboardList,
-    },
-    {
-      label: "Completed Task",
-      count: tasks.filter((t) => t.completed).length,
-      color: "from-blue-400 to-blue-500",
-      icon: CheckCircle,
-    },
-    {
-      label: "Accepted Task",
-      count: tasks.filter((t) => t.active && !t.completed && !t.failed).length,
-      color: "from-green-400 to-green-500",
-      icon: Clock,
-    },
-    {
-      label: "Failed Task",
-      count: tasks.filter((t) => t.failed).length,
-      color: "from-yellow-400 to-yellow-500",
-      icon: XCircle,
-    },
-  ];
+const stats = [
+  {
+    label: "New Task",
+    count: tasks.filter((t) => t.new_task).length,
+    color: "from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600",
+    icon: ClipboardList,
+  },
+  {
+    label: "Completed Task",
+    count: tasks.filter((t) => t.completed).length,
+    color: "from-emerald-400 to-emerald-500 hover:from-emerald-500 hover:to-emerald-600",
+    icon: CheckCircle,
+  },
+  {
+    label: "Accepted Task",
+    count: tasks.filter((t) => t.active && !t.completed && !t.failed).length,
+    color: "from-indigo-400 to-indigo-500 hover:from-indigo-500 hover:to-indigo-600",
+    icon: Clock,
+  },
+  {
+    label: "Failed Task",
+    count: tasks.filter((t) => t.failed).length,
+    color: "from-rose-400 to-rose-500 hover:from-rose-500 hover:to-rose-600",
+    icon: XCircle,
+  },
+];
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">

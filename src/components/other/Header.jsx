@@ -5,9 +5,16 @@ const Header = ({ data, onLogout }) => {
     <div className="flex items-center justify-between py-4 border-b border-gray-700">
       {/* Greeting */}
       <div>
-        <h1 className="text-sm sm:text-base text-gray-400">Hello,</h1>
+        <h1 className="text-lg text-gray-400">
+  Hello,
+  {data.role === "admin" && (
+    <span className="ml-1 px-2 py-0.5 rounded-full bg-orange-500 text-white text-sm font-semibold">
+      Admin
+    </span>
+  )}
+</h1>
         <h2 className="text-xl sm:text-3xl font-semibold text-white flex items-center gap-2">
-          {data.name}
+          {data.name.split(" ")[0]}  
           <span className="animate-wave">👋</span>
         </h2>
         {/* <p className="text-xs sm:text-sm text-gray-500">{role}</p> */}

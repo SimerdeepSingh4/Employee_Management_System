@@ -12,8 +12,8 @@ const App = () => {
   const [loggedInUserData, setloggedInUserData] = useState(null)
   const authData = useContext(AuthContext)
 
+  setLocalStorage();
   useEffect(() => {
-    setLocalStorage();
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser) {
       const userData = JSON.parse(loggedInUser);

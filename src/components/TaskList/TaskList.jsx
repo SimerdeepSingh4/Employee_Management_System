@@ -1,9 +1,18 @@
 import React from "react";
 
 const priorityColors = {
-    High: { priorityColor: "bg-red-600", cardColor: "from-red-400 to-red-500" },
-    Medium: { priorityColor: "bg-yellow-600", cardColor: "from-yellow-400 to-yellow-500" },
-    Low: { priorityColor: "bg-green-600", cardColor: "from-green-400 to-green-500" },
+    High: { 
+        priorityColor: "bg-red-600", 
+        cardColor: "from-red-400 to-red-500 hover:from-red-500 hover:to-red-600" 
+    },
+    Medium: { 
+        priorityColor: "bg-yellow-500", 
+        cardColor: "from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600" 
+    },
+    Low: { 
+        priorityColor: "bg-green-600", 
+        cardColor: "from-green-400 to-green-500 hover:from-green-500 hover:to-green-600" 
+    },
 };
 
 const TaskList = ({ data }) => {

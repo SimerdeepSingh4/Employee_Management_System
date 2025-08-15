@@ -3,7 +3,7 @@ import Header from '../other/Header'
 import CreateTask from '../other/CreateTask'
 import AllTask from '../other/AllTask'
 
-const AdminDashboard = ({data, onLogout}) => {
+const AdminDashboard = ({data, onLogout, sampleTasks}) => {
     console.log(data.name)
     return (
         
@@ -11,7 +11,7 @@ const AdminDashboard = ({data, onLogout}) => {
             
             <Header data={data} onLogout={onLogout}/>
             <CreateTask data={data}/>
-            <AllTask data={data}/>
+            <AllTask data={sampleTasks}/>
         </div>
     )
 }
